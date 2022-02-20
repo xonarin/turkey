@@ -382,3 +382,11 @@ header {
   font-style: normal;
   line-height: 1.1;
   color: #090a0b; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
