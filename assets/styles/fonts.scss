@@ -1,0 +1,71 @@
+@import "mixins";
+
+/* FONTS CormorantSC
+   =============================================== */
+
+@include font-face(
+  "CormorantSC",
+  "../assets/fonts/CormorantSC-Light/CormorantSC-Light",
+  300,
+  normal,
+  woff woff2
+);
+@include font-face(
+  "CormorantSC",
+  "../assets/fonts/CormorantSC-Regular/CormorantSC-Regular",
+  400,
+  normal,
+  woff woff2
+);
+@include font-face(
+  "CormorantSC",
+  "../assets/fonts/CormorantSC-Medium/CormorantSC-Medium",
+  500,
+  normal,
+  woff woff2
+);
+@include font-face(
+  "CormorantSC",
+  "../assets/fonts/CormorantSC-SemiBold/CormorantSC-SemiBold",
+  600,
+  normal,
+  woff woff2
+);
+@include font-face(
+  "CormorantSC",
+  "../assets/fonts/CormorantSC-Bold/CormorantSC-Bold",
+  700,
+  normal,
+  woff woff2
+);
+
+/* FONTS Geometria
+   =============================================== */
+   @include font-face(
+    "Geometria",
+    "../assets/fonts/Geometria-Light/GeometriaLight",
+    300,
+    normal,
+    woff woff2
+  );
+  @include font-face(
+    "Geometria",
+    "../assets/fonts/Geometria-Regular/GeometriaRegular",
+    400,
+    normal,
+    woff woff2
+  );
+  @include font-face(
+    "Geometria",
+    "../assets/fonts/Geometria-Medium/GeometriaMedium",
+    500,
+    normal,
+    woff woff2
+  );
+  @include font-face(
+    "Geometria",
+    "../assets/fonts/Geometria-SemiBold/GeometriaSemiBold",
+    600,
+    normal,
+    woff woff2
+  );

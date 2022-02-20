@@ -1,0 +1,86 @@
+@import "vars";
+
+// Connect fonts
+@mixin font-face(
+  $name,
+  $path,
+  $weight: null,
+  $style: null,
+  $exts: woff2 woff ttf svg
+) {
+  $src: null;
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_"),
+  );
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + "." + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+// Typography
+
+@mixin font-parametrs(
+  $font-family,
+  $font-size,
+  $font-weight,
+  $font-style,
+  $line-height
+) {
+  font-family: $font-family;
+  font-size: $font-size + px;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  line-height: $line-height;
+}
+
+// Media query
+@function mq-parse-query($query) {
+  $mq: "only screen ";
+
+  @if length($query) == 1 {
+    @return $mq + "and (min-width: " + $query + ")";
+  }
+
+  @if (
+    type-of(nth($query, 1)) == "string" and type-of(nth($query, 2)) == "number"
+  ) {
+    @return $mq + "and (" + nth($query, 1) + ": " + nth($query, 2) + ")";
+  }
+
+  @if (
+    type-of(nth($query, 1)) == "number" and type-of(nth($query, 2)) == "number"
+  ) {
+    @return $mq + "and (min-width: " + nth($query, 1) + ") and (max-width: " +
+      nth($query, 2) + " )";
+  }
+}
+
+@mixin mq($query) {
+  @media #{mq-parse-query($query)} {
+    @content;
+  }
+}

@@ -1,0 +1,5 @@
+header {
+  background-color: $color-gold;
+  @include font-parametrs($font-geometria, 16, 400, normal, 1.1);
+  color: $color-black;
+}
