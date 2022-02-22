@@ -1,0 +1,24 @@
+.timer {
+  text-align: center;
+  margin-bottom: 10px;
+  @include font-parametrs($font-geometria, 17, 700, normal, 1.1);
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    flex: 0 0 30%;
+    @include font-parametrs($font-geometria, 16, 500, normal, 1.1);
+    text-align: center;
+    border: 1px solid #fdc53c;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+  }
+}

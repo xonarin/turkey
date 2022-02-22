@@ -1,5 +1,78 @@
-header {
-  background-color: $color-gold;
-  @include font-parametrs($font-geometria, 16, 400, normal, 1.1);
-  color: $color-black;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 120px;
+    height: 104px;
+  }
+
+  &__menu-list {
+    display: flex;
+    margin: 0;
+    padding: 0 105px 0 80px;
+    list-style: none;
+  }
+
+  &__menu-item {
+    padding-right: 43px;
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__menu-link {
+    @include font-parametrs($font-geometria, 16, 400, normal, 1.1);
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__contact-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__contact-item {
+    padding-right: 30px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__phone-link {
+    display: inline-block;
+    color: $color-black;
+    @include font-parametrs($font-geometria, 18, 500, normal, 1.1);
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  &__online {
+    display: block;
+    text-align: right;
+    @include font-parametrs($font-geometria, 13, 500, normal, 1.1);
+  }
+
+  &__btn-callme {
+    @include font-parametrs($font-geometria, 14, 500, normal, 1.1);
+    background: transparent;
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    padding: 13px 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }

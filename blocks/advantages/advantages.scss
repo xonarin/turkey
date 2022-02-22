@@ -1,0 +1,53 @@
+.advantages {
+
+  &__title {
+    visibility: hidden;
+    font-size: 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    flex: 0 0 22%;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+    padding: 42px 15px 100px 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 10;
+
+    &_zabota {
+      background: url(../../assets/images/zabota.png) 0 0 no-repeat;
+      background-size: cover;
+    }
+
+    &_sud {
+      background: url(../../assets/images/sud.png) -50px 0 no-repeat;
+      background-size: cover;
+    }
+
+    &_vibor {
+      background: url(../../assets/images/vibor.png) -50px 0 no-repeat;
+      background-size: cover;
+    }
+
+
+    &-title {
+      @include font-parametrs($font-geometria, 21, 600, normal, 1.1);
+      letter-spacing: -0.2px;
+      margin: 0 0 15px 0;
+    }
+
+    &-description {
+      @include font-parametrs($font-geometria, 19, 40, normal, 1.1);
+      letter-spacing: -0.2px;
+      margin: 0;
+    }
+  }
+}
