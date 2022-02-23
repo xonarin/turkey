@@ -1598,3 +1598,39 @@ body {
 
 .link-icon > img {
   width: 100%; }
+
+.callme {
+  height: 45px;
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02a4fe;
+  z-index: 99; }
+  @media only screen and (max-width: 767px) {
+    .callme.fixed {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .callme-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Geometria", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.1;
+    text-decoration: none;
+    color: #ffffff; }

@@ -1,0 +1,27 @@
+.callme {
+  height: 45px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #02a4fe;
+  z-index: 99;
+
+  &.fixed {
+    @include mq(max-width $mq-767) {
+      display: flex;
+    }
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    @include font-parametrs($font-geometria, 18, 700, normal, 1.1);
+    text-decoration: none;
+    color: $color-white;
+  }
+}

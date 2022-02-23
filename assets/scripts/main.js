@@ -86,3 +86,13 @@ $(document).ready(function() {
     return false;
   });
 });
+
+//Плашка позвонить фикс
+$(window).scroll(function(){
+  if($(this).scrollTop()>500){
+      $('.callme').addClass('fixed');
+  }
+  else if ($(this).scrollTop()<500){
+      $('.callme').removeClass('fixed');
+  }
+});
