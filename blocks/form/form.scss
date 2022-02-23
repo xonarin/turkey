@@ -14,7 +14,8 @@
   }
 
   &__description {
-    @include font-parametrs($font-cormorant, 17, 700, normal, 1.1);
+    @include font-parametrs($font-cormorant, 18, 700, normal, 1.1);
+    text-align: center;
     margin: 0 0 10px 0;
   }
 

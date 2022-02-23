@@ -1,0 +1,62 @@
+.subscribe {
+  padding: 50px 0 70px 0;
+  background-color: $color-blue;
+
+  @include mq(max-width $mq-767) {
+    padding: 50px 0 0 0;
+  }
+
+  &__title {
+    @include font-parametrs($font-cormorant, 50, 700, normal, 1.1);
+    letter-spacing: 3px;
+    margin: 0 0 40px 0;
+
+    @include mq(max-width $mq-767) {
+      @include font-parametrs($font-cormorant, 35, 700, normal, 1.1);
+    }
+  }
+
+  &__description {
+    @include font-parametrs($font-geometria, 20, 400, normal, 1.1);
+
+    @include mq(max-width $mq-767) {
+      @include font-parametrs($font-geometria, 18, 400, normal, 1.1);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    @include mq(max-width $mq-767) {
+      flex-direction: column;
+    }
+  }
+
+  &__info, &__telegram {
+    flex: 0 0 50%;
+  }
+
+  &__telegram {
+    text-align: right;
+  }
+
+  &__phone-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__phone-img {
+    position: relative;
+    z-index: 10;
+    animation: ring 4s 3s ease-in-out infinite;
+  }
+
+  &__phone-palm {
+    position: absolute;
+    bottom: 10%;
+    left: -52%;
+    transform: rotate(-15deg);
+    width: 400px;
+  }
+}

@@ -2,6 +2,8 @@
 @import "../assets/styles/vars.scss";
 @import "../assets/styles/mixins.scss";
 @import "../assets/styles/fonts.scss";
+@import "../blocks/body/body.scss";
+@import "../blocks/animation/animation.scss";
 @import "../blocks/container/container.scss";
 @import "../blocks/header/header.scss";
 @import "../blocks/hero/hero.scss";
@@ -9,3 +11,8 @@
 @import "../blocks/timer/timer.scss";
 @import "../blocks/advantages/advantages.scss";
 @import "../blocks/about/about.scss";
+@import "../blocks/subscribe/subscribe.scss";
+@import "../blocks/services/services.scss";
+@import "../blocks/footer/footer.scss";
+@import "../blocks/call-widget/call-widget.scss";
+

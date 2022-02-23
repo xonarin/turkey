@@ -1,0 +1,142 @@
+.footer {
+
+  &__head {
+    position: relative;
+    padding: 45px 0 40px 0;
+    background: url(../assets/images/footer-back.jpg) 0 0 no-repeat;
+    background-size: cover;
+    z-index: 10;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(136deg, #ffffff 20%, #ffffff40 50%, #ffffff66 100%);
+      z-index: 1;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__title {
+    @include font-parametrs($font-cormorant, 60, 700, normal, 1.1);
+    letter-spacing: -1px;
+    margin: 0 0 35px 0;
+
+    @include mq(max-width $mq-767) {
+      @include font-parametrs($font-cormorant, 35, 700, normal, 1.1);
+    }
+  }
+
+  &__contact {
+    max-width: 380px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, .2);
+    padding: 37px 35px 40px 55px;
+    box-sizing: border-box;
+
+    @include mq(max-width $mq-767) {
+      max-width: 360px;
+      padding: 20px 25px;
+    }
+  }
+
+  &__contact-title {
+    @include font-parametrs($font-geometria, 22, 700, normal, 1.1);
+    letter-spacing: 0px;
+    margin: 0 0 20px 0;
+  }
+
+  &__contact-phone {
+    @include font-parametrs($font-geometria, 18, 700, normal, 1.1);
+    color: $color-black;
+    text-decoration: none;
+  }
+
+  &__contact-description {
+    @include font-parametrs($font-geometria, 16, 400, normal, 1.1);
+    letter-spacing: 1px;
+  }
+
+  &__social-list {
+    display: flex;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__social-item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__social-link {
+    display: block;
+    width: 35px;
+  }
+
+  &__social-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__bottom-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    align-items: center;
+
+    @include mq(max-width $mq-767) {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    width: 80px;
+
+    @include mq(max-width $mq-767) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bottom-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include mq(max-width $mq-767) {
+      flex-direction: column;
+    }
+  }
+
+  &__bottom-item {
+    padding-right: 43px;
+
+    @include mq(max-width $mq-767) {
+      padding-right: 0;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+
+  &__bottom-link {
+    @include font-parametrs($font-geometria, 16, 500, normal, 1.1);
+    text-decoration: none;
+    color: $color-black;
+  }
+}

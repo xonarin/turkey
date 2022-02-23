@@ -5,25 +5,55 @@
   right: 0;
   z-index: 100;
 
+  &.fixed {
+    background-color: $color-white;
+  }
+
   &__wrap {
     display: flex;
     align-items: center;
+
+    @include mq(max-width $mq-1200) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
     width: 120px;
     height: 104px;
+
+    @include mq(max-width $mq-1200) {
+      width: 100px;
+      height: 84px;
+    }
+
+    @include mq(max-width $mq-576) {
+      width: 80px;
+      height: 64px;
+    }
   }
 
   &__menu-list {
     display: flex;
     margin: 0;
-    padding: 0 105px 0 80px;
+    padding: 0 65px 0 45px;
     list-style: none;
+
+    @include mq(max-width $mq-1200) {
+      padding: 0 45px 0 25px;
+    }
+
+    @include mq(max-width $mq-1080) {
+      display: none;
+    }
   }
 
   &__menu-item {
-    padding-right: 43px;
+    padding-right: 28px;
+
+    @include mq(max-width $mq-1200) {
+      padding-right: 20px;
+    }
 
     &:last-child {
       padding: 0;
@@ -46,6 +76,14 @@
   &__contact-item {
     padding-right: 30px;
 
+    @include mq(max-width $mq-1200) {
+      padding-right: 15px;
+    }
+
+    @include mq(max-width $mq-576) {
+      padding-right: 10px;
+    }
+
     &:last-child {
       padding-right: 0;
     }
@@ -58,12 +96,48 @@
     text-decoration: none;
     letter-spacing: 1px;
     margin-bottom: 10px;
+
+    @include mq(max-width $mq-1200) {
+      @include font-parametrs($font-geometria, 16, 500, normal, 1.1);
+      margin-bottom: 5px;
+    }
+
+    @include mq(max-width $mq-576) {
+      font-size: 12px;
+    }
+
   }
 
   &__online {
-    display: block;
     text-align: right;
     @include font-parametrs($font-geometria, 13, 500, normal, 1.1);
+
+    @include mq(max-width $mq-576) {
+      @include font-parametrs($font-geometria, 11, 500, normal, 1.1);
+    }
+  }
+
+  &__online-info {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $color-light-green;
+      animation: pulse-online 2s ease-in-out infinite;
+
+      @include mq(max-width $mq-576) {
+        left: -13px;
+        width: 5px;
+        height: 5px;
+      }
+    }
   }
 
   &__btn-callme {
@@ -74,5 +148,15 @@
     padding: 13px 14px;
     text-transform: uppercase;
     cursor: pointer;
+
+    @include mq(max-width $mq-1200) {
+      @include font-parametrs($font-geometria, 12, 500, normal, 1.1);
+      padding: 13px 10px;
+    }
+
+    @include mq(max-width $mq-576) {
+      @include font-parametrs($font-geometria, 8, 500, normal, 1.1);
+      padding: 13px 5px;
+    }
   }
 }

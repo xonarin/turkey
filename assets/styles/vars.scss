@@ -7,18 +7,23 @@ $color-white: #ffffff;
 $color-gold: #e5c16c;
 $color-black-gold: #b48e34;
 $color-organge-gold: #f7ae00;
-$color-blue: #bedcf5;
+$color-blue: #dbebf8;
+$color-light-blue: #f0f7fd;
 $color-black: #090a0b;
 $color-gray: #cccccc;
+$color-light-green: #49e849;
 
 // Media width
 
 $mq-1200: 1200px;
+$mq-1080: 1080px;
 $mq-1024: 1024px;
+$mq-992: 992px;
 $mq-767: 767px;
 $mq-680: 680px;
 $mq-640: 640px;
 $mq-576: 576px;
+$mq-480: 480px;
 // Transition
 
 $nice-ease: all 0.2s ease-out;

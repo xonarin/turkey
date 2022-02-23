@@ -11,6 +11,10 @@
     padding: 0;
     margin: 0;
     list-style: none;
+
+    @include mq(max-width $mq-767) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -22,19 +26,46 @@
     box-sizing: border-box;
     z-index: 10;
 
+    @include mq(max-width $mq-767) {
+      flex: 0 0 48%;
+      margin-bottom: 20px;
+    }
+
+    @include mq(max-width $mq-480) {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+
     &_zabota {
-      background: url(../../assets/images/zabota.png) 0 0 no-repeat;
+      background: url(../assets/images/zabota.png) 0 0 no-repeat;
       background-size: cover;
     }
 
     &_sud {
-      background: url(../../assets/images/sud.png) -50px 0 no-repeat;
+      background: url(../assets/images/sud.png) -50px 0 no-repeat;
       background-size: cover;
+
+      @include mq(max-width $mq-480) {
+        background: url(../assets/images/sud.png) 0 0 no-repeat;
+      }
     }
 
     &_vibor {
-      background: url(../../assets/images/vibor.png) -50px 0 no-repeat;
+      background: url(../assets/images/vibor.png) -50px 0 no-repeat;
       background-size: cover;
+
+      @include mq(max-width $mq-480) {
+        background: url(../assets/images/vibor.png) 0 0 no-repeat;
+      }
+    }
+
+    &_invest {
+      background: url(../assets/images/vibor.png) -50px 0 no-repeat;
+      background-size: cover;
+
+      @include mq(max-width $mq-480) {
+        background: url(../assets/images/vibor.png) 0 0 no-repeat;
+      }
     }
 
 
@@ -45,7 +76,7 @@
     }
 
     &-description {
-      @include font-parametrs($font-geometria, 19, 40, normal, 1.1);
+      @include font-parametrs($font-geometria, 19, 400, normal, 1.1);
       letter-spacing: -0.2px;
       margin: 0;
     }
